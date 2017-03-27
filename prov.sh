@@ -4,3 +4,4 @@ apt-get -y install make python-pip libffi-dev mongodb postgresql libssl-dev \
     libyaml-dev
 pip install --upgrade pip
 pip install virtualenv
+pip install tox
