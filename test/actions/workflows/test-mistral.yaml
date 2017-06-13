@@ -1,0 +1,17 @@
+version: '2.0'
+
+test.test-mistral:
+    description: A simple workflow that runs the test action
+    type: direct
+    input:
+      - test_param
+    output:
+        stdout: <% $.stdout %>
+    tasks:
+        task1:
+            action: test.echoer
+            input:
+              input: <% $.test %>
+            publish:
+                stdout: <% task(task1).result.stdout %>
+                stderr: <% task(task1).result.stderr %>

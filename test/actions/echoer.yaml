@@ -1,0 +1,13 @@
+---
+name: echoer
+runner_type: run-python
+description: Do something
+enabled: true
+entry_point: echoer.py
+parameters:
+  input_object:
+    type: array
+    items:
+      type: object
+    required: true
+    position: 0
