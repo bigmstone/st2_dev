@@ -18,5 +18,5 @@ import json
 
 
 class EchoerAction(Action):
-    def run(self, input_object):
-        return json.dumps(input_object)
+    def run(self, action_input):
+        return json.dumps(action_input)

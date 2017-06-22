@@ -2,10 +2,15 @@ install_deps () {
     apt-get update
     apt-get -y install make python-pip libffi-dev mongodb postgresql libssl-dev \
         rabbitmq-server python-dev python-setuptools libxslt1-dev libxml2-dev \
-        libyaml-dev
+        libyaml-dev npm nodejs nginx
+    ln -s $(which nodejs) /usr/bin/node
+    npm install -g gulp
     pip install --upgrade pip
     pip install virtualenv
     pip install tox
+    rm -f /etc/nginx/sites-enabled/default
+    cp /vagrant/include/st2.conf /etc/nginx/conf.d/
+    systemctl restart nginx
 }
 
 install_mistral () {

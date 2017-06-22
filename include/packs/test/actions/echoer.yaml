@@ -5,9 +5,8 @@ description: Do something
 enabled: true
 entry_point: echoer.py
 parameters:
-  input_object:
-    type: array
-    items:
-      type: object
+  action_input:
+    type: string
+    secret: true
     required: true
     position: 0
