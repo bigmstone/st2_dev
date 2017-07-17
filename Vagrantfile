@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "../st2flow", "/home/ubuntu/st2flow", type: "rsync", rsync__exclude: ["node_modules"]
   config.vm.synced_folder "../mistral", "/home/ubuntu/mistral", type: "rsync", rsync__exclude: ".git/"
   config.vm.synced_folder "../st2mistral", "/home/ubuntu/st2mistral", type: "rsync", rsync__exclude: ".git/"
-  config.vm.synced_folder "./include/packs/", "/opt/stackstorm/packs", type: "rsync", rsync__exclude: ".git/"
+  config.vm.synced_folder "./include/packs/test", "/opt/stackstorm/packs/test", type: "rsync", rsync__exclude: ".git/"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "4096"
