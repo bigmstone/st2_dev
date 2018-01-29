@@ -1,0 +1,6 @@
+---
+name: "main-chain"
+description: "The chain with the plan."
+runner_type: "action-chain"
+entry_point: "chains/main_chain.yaml"
+enabled: true

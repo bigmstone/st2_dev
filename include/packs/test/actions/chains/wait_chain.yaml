@@ -1,0 +1,21 @@
+---
+chain:
+  - name: wait_1
+    ref: test.waiter
+    parameters:
+      wait_time: 1
+    on-success: wait_2
+  - name: wait_2
+    ref: test.waiter
+    parameters:
+      wait_time: 1
+    on-success: wait_3
+  - name: wait_3
+    ref: test.waiter
+    parameters:
+      wait_time: 1
+    on-success: wait_4
+  - name: wait_4
+    ref: test.waiter
+    parameters:
+      wait_time: 1
