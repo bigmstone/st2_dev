@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "private_network", ip: "192.168.50.10"
 
-  config.vm.synced_folder "../st2", "/home/ubuntu/st2", type: "rsync", rsync__exclude: [".git/", "virtualenv/"]
+  config.vm.synced_folder "../st2", "/home/ubuntu/st2", type: "rsync", rsync__exclude: ["virtualenv/"]
   config.vm.synced_folder "../st2web", "/home/ubuntu/st2web", type: "rsync", rsync__exclude: ["node_modules", "config.js", "npm-debug.log", "node_modules", "components", "css", "js", "build", "discs"]
   config.vm.synced_folder "../st2flow", "/home/ubuntu/st2flow", type: "rsync", rsync__exclude: ["node_modules"]
   config.vm.synced_folder "../mistral", "/home/ubuntu/mistral", type: "rsync", rsync__exclude: ".git/"

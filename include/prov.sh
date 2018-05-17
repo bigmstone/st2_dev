@@ -5,7 +5,7 @@ install_deps () {
         libyaml-dev npm nodejs nginx
     ln -s $(which nodejs) /usr/bin/node
     npm install -g gulp
-    pip install --upgrade pip
+    pip install --upgrade pip<10
     pip install virtualenv
     pip install tox
     rm -f /etc/nginx/sites-enabled/default
