@@ -1,6 +1,0 @@
----
-name: "wait-chain"
-description: "Sir waits a lot a lot."
-runner_type: "action-chain"
-entry_point: "chains/wait_chain.yaml"
-enabled: true

@@ -1,6 +1,0 @@
----
-name: param-too-long
-runner_type: run-python
-description: Do something
-enabled: true
-entry_point: param_too_long.py

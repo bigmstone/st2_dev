@@ -1,9 +1,0 @@
----
-chain:
-  - name: get_param
-    ref: test.param-too-long
-    on-success: breakit
-  - name: breakit
-    ref: test.echoer
-    parameters:
-      action_input: "{{get_param.result.result}}"
